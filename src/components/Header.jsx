@@ -2,13 +2,16 @@ import React from "react";
 import Logo from "../assets/Logo.svg";
 import { BsTwitter, BsTelegram } from "react-icons/bs";
 import { RiDiscordFill } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
 export default function Header() {
   return (
     <header className="bg-navigation">
-      <nav className="flex justify-center items-center gap-4 h-20 border-b-[1px] border-white">
+      <nav className="flex box-border justify-center items-center gap-4 h-20 border-b-[1px] border-[#F2F4F7] border-solid">
         <ul className="flex gap-10 text-white font-Eremitage text-[16px] items-center leading-6 font-bold">
           <img src={Logo} alt="logo svg" className="h-8" />
-          <li className="text-[#aeff00]">Home</li>
+          <li className="text-[#aeff00]">
+            <NavLink to="/">Home</NavLink>
+          </li>
           <li>Manifesto</li>
           <li>$CAT token</li>
           <li>About</li>

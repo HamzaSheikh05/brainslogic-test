@@ -6,9 +6,11 @@ module.exports = {
       backgroundImage: {
         navigation:
           "linear-gradient(180deg, rgba(0, 5, 0, 1) 7.99%, rgba(0, 5, 0, 1) 86.64%)",
+        "video-img": "url('./assets/bgImage.png')",
       },
       fontFamily: {
         Eremitage: "Eremitage",
+        Oyko: "Oyko",
       },
     },
   },
