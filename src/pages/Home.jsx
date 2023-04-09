@@ -84,7 +84,15 @@ export default function Home() {
         </div>
 
         {/** Cyber Arena Container  3*/}
-        <div className="flex"></div>
+        <div className="flex flex-col items-start gap-8 w-[1280px] h-[164px]">
+          <h2 className="font-Eremitage font-semibold text-[40px] leading-[48px] text-white w-[582px] text-left">
+            Cyber Arena Game modes
+          </h2>
+          <p className="font-Oyko font-normal text-[#EAECF0] text-2xl w-[582px] text-left">
+            The Roman Colosseum in Cyber-Punk style, with thousands fighting to
+            death against the cybernetically enhanced people.
+          </p>
+        </div>
 
         {/** Cyber Arena Container  4*/}
         <div className="flex"></div>
