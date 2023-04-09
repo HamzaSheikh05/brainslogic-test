@@ -4,6 +4,7 @@ import DaoLogo from "../assets/DaoLogo.png";
 import DogeChain from "../assets/Dogechain.png";
 import GameFi from "../assets/Gamefi.png";
 import LDA from "../assets/LDA.png";
+import League from "../assets/LeagueMode.png";
 export default function Home() {
   return (
     <>
@@ -33,7 +34,7 @@ export default function Home() {
           <h4 className="font-Oyko font-normal text-2xl text-[#EAECF0] text-center h-8">
             Cyber Arena is powered by Imperium Games and supported by:
           </h4>
-          <div className="flex flex-row justify-between items-center gap-12 h-14">
+          <div className="flex flex-row justify-between items-center gap-40 h-14">
             <img src={DaoLogo} alt="DAO" className="w-[254px] h-14" />
             <img src={DogeChain} alt="DogeChain" className="W-[254px] h-14" />
             <img src={GameFi} alt="GameFi" className="w-[254px] h-14" />
@@ -42,8 +43,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex bg-cover-img justify-center">
-        <div className="flex h-[164px] w-[1280px] flex-col items-end justify-center">
+      <section className="flex flex-col items-center bg-cover-img bg-cover">
+        {/** Cyber Arena Container  1*/}
+        <div className="flex h-[164px] w-[1280px] flex-col justify-center items-end">
           <h1 className="font-Eremitage font-semibold w-[582px] text-left text-[40px] leading-[48px] text-white">
             Cyber Arena Game modes
           </h1>
@@ -53,9 +55,38 @@ export default function Home() {
           </h4>
         </div>
 
+        {/** Cyber Arena Container  2*/}
+        <div className="flex gap-12 w-[1280px] h-[512px] justify-center items-center">
+          <img src={League} alt="LeagueMode" className="h-[349px] w-[621px]" />
+          <div className="flex flex-col items-start gap-10 w-[544px] h-[360px]">
+            <div className="flex flex-col items-start gap-5 h-[168px] w-[544px] box-border border-l-4 border-solid border-[#AEFF00] py-4 pr-0 pl-6">
+              <h3 className="text-white font-Eremitage font-semibold text-2xl w-[520px] text-left">
+                Story mode
+              </h3>
+              <p className="text-[#EAECF0] font-Oyko font-normal text-[20px] leading-6 text-left w-[520px]">
+                Each character has a unique story, play-through experience, and
+                gaming life path. Upgrade characters and assist them in
+                realising their personal vendettas or liberation goals.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-start gap-5 h-[152px] w-[544px] py-4 pr-0 pl-6 box-border border-l-4 border-solid border-[#F2F4F7]">
+              <h3 className="text-white font-Eremitage font-semibold text-2xl w-[520px] text-left">
+                League mode
+              </h3>
+              <h6 className="font-Oyko font-normal text-[20px] leading-6 text-[#EAECF0] w-[520px] text-left">
+                Progress through the league divisions, climb up the ranking
+                system, claim exclusive NFTs, tokens, and receive trial rewards
+                at the end of each season.
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        {/** Cyber Arena Container  3*/}
         <div className="flex"></div>
 
-        <div className="flex"></div>
+        {/** Cyber Arena Container  4*/}
         <div className="flex"></div>
       </section>
     </>
