@@ -1,8 +1,24 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { items } from "../database/item";
+import { BsArrowLeftSquare } from "react-icons/bs";
+import { BsArrowRightSquare } from "react-icons/bs";
 export default function Characters() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const onNext = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === items.length - 1 ? 0 : prevSlide + 1
+    );
+  };
+
+  const onPrev = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? items.length - 1 : prevSlide - 1
+    );
+  };
+
   return (
-    <section className="flex bg-navigation justify-center">
+    <section className="flex flex-col items-center bg-[#000500] justify-center">
       <div className="flex flex-row justify-between items-start p-0 gap-8 w-[1504px] h-[100px]">
         <div className="flex flex-col items-start gap-5 w-[768px] h-[100px]">
           <h1 className="font-Eremitage font-semibold text-[40px] leading-[48px] text-white h-12 w-[768px] text-left">
@@ -17,7 +33,33 @@ export default function Characters() {
         </button>
       </div>
 
-      <div className="flex flex-col items-start gap-16 h-[600px]"></div>
+      <div className="flex flex-col items-start justify-center gap-16 h-[600px] w-[1504px]">
+        <div className="flex items-center justify-center gap-4">
+          {items.map((item, index) => (
+            <img
+              key={index}
+              src={item.image}
+              alt={`character ${index}`}
+              className={`w-[240px] h-[320px] ${
+                currentSlide === index ? "border-4 border-blue-300" : ""
+              }`}
+              onClick={() => setCurrentSlide(index)}
+            />
+          ))}
+        </div>
+
+        {/** Navigation Buttons */}
+        <div className="flex items-start justify-between gap-8">
+          <BsArrowLeftSquare
+            className="text-[#AEFF00] w-14 h-14"
+            onClick={onPrev}
+          />
+          <BsArrowRightSquare
+            className="text-[#AEFF00] w-14 h-14"
+            onClick={onNext}
+          />
+        </div>
+      </div>
     </section>
   );
 }
