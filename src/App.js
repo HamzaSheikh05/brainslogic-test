@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 function App() {
   return (
-    <div className="App">
+    <div className="App h-screen w-full">
       <Header />
       <main>
         <Routes>
