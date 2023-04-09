@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { items } from "../database/item";
 import { BsArrowLeftSquare } from "react-icons/bs";
 import { BsArrowRightSquare } from "react-icons/bs";
+
 export default function Characters() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
